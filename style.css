@@ -66,6 +66,13 @@ body{
 	font-size:14px;
 	color:#888;
 }
+p a {
+	color: var(--cinnamon);
+	transition: all 0.3s ease;
+}
+p a:hover {
+	color: var(--black);
+}
 .pro-features {
 	position: fixed;
 	right: -300px;
@@ -1765,7 +1772,6 @@ body{
 }
 .clients .single-clients img {
 	width: 100%;
-	cursor: pointer;
 	text-align: center;
 	float: none;
 	padding: 0 35px;
