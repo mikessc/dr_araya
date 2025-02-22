@@ -290,7 +290,7 @@ Version:	1.1
 					scrollTop: $(anchor.attr('href')).offset().top - 100
 				}, 1000);
 			e.preventDefault();
-		});
+		})
 		
 		/*=======================
 			Stellar JS
@@ -325,7 +325,48 @@ Version:	1.1
 	======================*/
 	$(window).on('load', function() {
 		$('.preloader').addClass('preloader-deactivate');
+		
+		document.getElementById("emailForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // Obtener los valores del formulario
+            //const toEmail = document.getElementById("to").value;
+            //const subject = document.getElementById("subject").value;
+            //const message = document.getElementById("message").value;
+
+            // Mostrar mensaje de carga
+            //document.getElementById("status").textContent = "Enviando correo...";
+
+            // Llamada a la API de Resend
+            fetch("https://api.resend.com/emails", {
+                method: "POST",
+                headers: {
+                    "Authorization": "Bearer re_P4NKWc4J_BLx8dMuMhtF6dBHkGu5rjf3Q", // Reemplaza con tu API Key de Resend
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    from: "dr-araya-correos-@outlook.com", // Debe estar verificado en Resend
+                    to: "abrahamfduran@gmail.com",
+                    subject: "subject",
+                    text: "message"
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.id) {
+                    //document.getElementById("status").textContent = "Correo enviado con éxito ";
+                } else {
+                    //document.getElementById("status").textContent = "Error al enviar el correo ";
+                }
+            })
+            .catch(error => {
+                //document.getElementById("status").textContent = "Error de conexión ";
+                console.error("Error:", error);
+            });
+        });
 	});
+
+	
 	
 	
 })(jQuery);
