@@ -655,6 +655,14 @@ body{
 .slider .single-slider .btn.primary:before{
 	background:var(--indigo);
 }
+.owl-carousel .owl-stage {
+	display: flex;
+	align-items: center;
+}
+.owl-carousel .owl-stage-outer {
+	display: flex;
+	justify-content: center;
+}
 .slider .owl-carousel .owl-nav {
 	margin: 0;
     position: absolute;
@@ -1640,7 +1648,14 @@ body{
 	position: relative;
 	overflow: hidden;
 	margin: 15px 0;
-	padding:45px 35px 30px 35px;
+	padding:45px 35px 10px 35px;
+	height: 100%;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+.pricing-table .single-table:hover {
+	margin-top: 5px;
 }
 /* Table Head */
 .pricing-table .single-table .table-head {
@@ -1736,8 +1751,14 @@ body{
 	padding:100px 0px;
 	position:relative;
 }
-.clients .single-clients{
-	
+.clients .single-clients {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.clients .single-clients .icon {
+	color: var(--white);
+    font-size: 60px;
 }
 .clients .single-clients img {
 	width: 100%;
@@ -2819,7 +2840,10 @@ body{
 	color:var(--white);
 	background: var(--indigo);
 }
-.appointment .appointment-image{}
+.appointment .appointment-image{
+	position: absolute;
+	bottom: 0;
+}
 .appointment.single-page .button .btn{
 	width:100%;
 }
