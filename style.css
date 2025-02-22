@@ -320,6 +320,9 @@ body{
 	float: left;
 	margin-top: 18px;
 }
+.header .logo img {
+	width: 100%;
+}
 .header .navbar {
 	background: none;
 	box-shadow: none;
@@ -327,6 +330,9 @@ body{
 	margin: 0;
 	height: 0px;
 	min-height: 0px;
+}
+.header .nav.menu {
+	justify-content: flex-end;
 }
 .header .nav li{
 	margin-right: 15px;
