@@ -3991,6 +3991,11 @@ body{
 .footer{
 	position:relative;
 }
+.footer .footer_logo {
+	margin-bottom: 40px;
+    filter: invert(1) brightness(100);
+    width: 100%;
+}
 .footer .footer-top{
 	padding:100px 0px;
 	position:relative;
