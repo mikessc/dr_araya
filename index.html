@@ -85,11 +85,11 @@
 								<div class="main-menu">
 									<nav class="navigation">
 										<ul class="nav menu">
-											<li class="active"><a href="#">Inicio</i></a></li>
-											<li><a href="#">Doctor</a></li>
-											<li><a href="#">Procedimientos</a></li>
-											<li><a href="#">Clinicas</a></li>
-											<li><a href="#">Contacto</a></li>
+											<li class="active"><a href="#home">Inicio</i></a></li>
+											<li><a href="#doctor">Doctor</a></li>
+											<li><a href="#servicios">Servicios</a></li>
+											<li><a href="#tratamientos">Tratamientos</a></li>
+											<li><a href="#procedimientos">Procedimientos</a></li>
 										</ul>
 									</nav>
 								</div>
@@ -97,7 +97,7 @@
 							</div>
 							<div class="col-lg-2 col-12">
 								<div class="get-quote">
-									<a href="appointment.html" class="btn">Agendar Cita</a>
+									<a href="#appointment" class="btn">Agendar Cita</a>
 								</div>
 							</div>
 						</div>
@@ -109,10 +109,10 @@
 		<!-- End Header Area -->
 		
 		<!-- Slider Area -->
-		<section class="slider">
+		<section class="slider" id="home">
 			<div class="hero-slider">
 				<!-- Start Single Slider -->
-				<div class="single-slider" style="background-image:url('img/slider2.jpg')">
+				<div class="single-slider" style="background-image:url('img/slider_principal.jpg')">
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-7">
@@ -130,7 +130,7 @@
 				</div>
 				<!-- End Single Slider -->
 				<!-- Start Single Slider -->
-				<div class="single-slider" style="background-image:url('img/slider.jpg')">
+				<div class="single-slider" style="background-image:url('img/slider_principal.jpg')">
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-7">
@@ -148,7 +148,7 @@
 				</div>
 				<!-- Start End Slider -->
 				<!-- Start Single Slider -->
-				<div class="single-slider" style="background-image:url('img/slider3.jpg')">
+				<div class="single-slider" style="background-image:url('img/slider_principal.jpg')">
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-7">
@@ -226,7 +226,7 @@
 		<!--/End Start schedule Area -->
 
 		<!-- Start Why choose -->
-		<section class="why-choose section" >
+		<section class="why-choose section" id="doctor">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-4 offset-lg-2 col-12 d-flex align-items-center">
@@ -376,7 +376,7 @@
 		<!--/ End Fun-facts -->
 		
 		<!-- Start service -->
-		<section class="services section">
+		<section class="services section" id="servicios">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
@@ -466,7 +466,7 @@
 		<!--/ End service -->
 		
 		<!-- Pricing Table -->
-		<section class="pricing-table section">
+		<section class="pricing-table section" id="tratamientos">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
@@ -570,7 +570,7 @@
 		
 		
 		<!-- Start Blog Area -->
-		<section class="blog section" id="blog">
+		<section class="blog section" id="procedimientos">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
@@ -658,7 +658,7 @@
 		<!--/Ens clients -->
 		
 		<!-- Start Appointment -->
-		<section class="appointment">
+		<section class="appointment" id="appointment">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
@@ -773,8 +773,9 @@
 						<div class="col-lg-3 col-md-6 col-12">
 							<div class="single-footer">
 								<img src="img/isologo.svg" alt="" class="footer_logo">
-								<p>San José, Turrialba, y Alajuela</p>
-								<p>Horario:</p>
+								<p><i class="icofont-location-pin"></i> San José, Turrialba, y Alajuela</p>
+								<p><i class="icofont-phone"></i> Tel: +506 8877 6655</p>
+								<p><i class="icofont-ui-clock"></i> Horario:</p>
 								<p>Lunes a Viernes: 9:00am - 5:00pm</p>
 								<!-- Social -->
 								<ul class="social">
@@ -787,42 +788,21 @@
 								<!-- End Social -->
 							</div>
 						</div>
-						<div class="col-lg-3 col-md-6 col-12">
+						<div class="col-lg-3 offset-lg-6 col-md-4 offset-md-2 col-12">
 							<div class="single-footer f-link">
-								<h2>Quick Links</h2>
+								<h2>Secciones</h2>
 								<div class="row">
 									<div class="col-12">
 										<ul>
-											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Inicio</a></li>
-											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>About Us</a></li>
-											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Services</a></li>
-											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Our Cases</a></li>
-											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Other Links</a></li>	
+											<li class="active"><a href="#home"><i class="fa fa-caret-right" aria-hidden="true"></i>Inicio</i></a></li>
+											<li><a href="#doctor"><i class="fa fa-caret-right" aria-hidden="true"></i>Doctor</a></li>
+											<li><a href="#servicios"><i class="fa fa-caret-right" aria-hidden="true"></i>Servicios</a></li>
+											<li><a href="#tratamientos"><i class="fa fa-caret-right" aria-hidden="true"></i>Tratamientos</a></li>
+											<li><a href="#procedimientos"><i class="fa fa-caret-right" aria-hidden="true"></i>Procedimientos</a></li>
+											<li><a href="#appointment"><i class="fa fa-caret-right" aria-hidden="true"></i>Agendar</a></li>
 										</ul>
 									</div>
 								</div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-6 col-12">
-							<div class="single-footer">
-								<h2>Open Hours</h2>
-								<p>Lorem ipsum dolor sit ame consectetur adipisicing elit do eiusmod tempor incididunt.</p>
-								<ul class="time-sidual">
-									<li class="day">Monday - Fridayp <span>8.00-20.00</span></li>
-									<li class="day">Saturday <span>9.00-18.30</span></li>
-									<li class="day">Monday - Thusday <span>9.00-15.00</span></li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-6 col-12">
-							<div class="single-footer">
-								<h2>Newsletter</h2>
-								<p>subscribe to our newsletter to get allour news in your inbox.. Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
-								<form action="mail/mail.php" method="get" target="_blank" class="newsletter-inner">
-									<input name="email" placeholder="Email Address" class="common-input" onfocus="this.placeholder = ''"
-										onblur="this.placeholder = 'Your email address'" required="" type="email">
-									<button class="button"><i class="icofont icofont-paper-plane"></i></button>
-								</form>
 							</div>
 						</div>
 					</div>
@@ -835,7 +815,7 @@
 					<div class="row">
 						<div class="col-lg-12 col-md-12 col-12">
 							<div class="copyright-content">
-								<p>© Copyright 2018  |  All Rights Reserved by <a href="https://www.wpthemesgrid.com" target="_blank">wpthemesgrid.com</a> </p>
+								<p>2025 © Derechos Reservados   |  Dr. Fabián Araya</a> </p>
 							</div>
 						</div>
 					</div>

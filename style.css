@@ -57,6 +57,9 @@ Version:	1.1
 	--cinnamon: #7f421f;
 	--azure: #074e9f;
 }
+html {
+	scroll-behavior: smooth;
+}
 body{
     font-family: 'Montserrat', sans-serif;
 	font-weight: 400;
