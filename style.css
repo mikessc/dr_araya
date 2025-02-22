@@ -655,14 +655,6 @@ body{
 .slider .single-slider .btn.primary:before{
 	background:var(--indigo);
 }
-.owl-carousel .owl-stage {
-	display: flex;
-	align-items: center;
-}
-.owl-carousel .owl-stage-outer {
-	display: flex;
-	justify-content: center;
-}
 .slider .owl-carousel .owl-nav {
 	margin: 0;
     position: absolute;
@@ -1750,6 +1742,14 @@ body{
 	background-position:center;
 	padding:100px 0px;
 	position:relative;
+}
+.clients .owl-carousel .owl-stage {
+	display: flex;
+	align-items: center;
+}
+.clients .owl-carousel .owl-stage-outer {
+	display: flex;
+	justify-content: center;
 }
 .clients .single-clients {
 	display: flex;
@@ -2843,6 +2843,12 @@ body{
 .appointment .appointment-image{
 	position: absolute;
 	bottom: 0;
+	right: 0;
+	height: 100%;
+}
+
+.appointment .appointment-image img{
+	height: 100%;
 }
 .appointment.single-page .button .btn{
 	width:100%;
