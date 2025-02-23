@@ -663,22 +663,23 @@
 							<div class="row">
 								<div class="col-lg-6 col-md-6 col-12">
 									<div class="form-group">
-										<input name="name" type="text" placeholder="Name">
+										<input name="name" type="text" placeholder="Name" id="name">
 									</div>
 								</div>
 								<div class="col-lg-6 col-md-6 col-12">
 									<div class="form-group">
-										<input name="email" type="email" placeholder="Email">
+										<input name="email" type="email" placeholder="Email" id="email">
 									</div>
 								</div>
 								<div class="col-lg-6 col-md-6 col-12">
 									<div class="form-group">
-										<input name="phone" type="text" placeholder="Phone">
+										<input name="phone" type="text" placeholder="Phone" id="phone">
 									</div>
 								</div>
 								<div class="col-lg-6 col-md-6 col-12">
 									<div class="form-group">
-										<div class="nice-select form-control wide" tabindex="0"><span class="current">Procedimientos</span>
+										<div class="nice-select form-control wide" tabindex="0">
+											<span class="current" id="procedimiento">Procedimientos</span>
 											<ul class="list">
 												<li data-value="2" class="option">Ultrasonido de abdomen</li>
 												<li data-value="3" class="option">Ultrasonido de cuello y mama</li>
@@ -690,7 +691,8 @@
 								</div>
 								<div class="col-lg-6 col-md-6 col-12">
 									<div class="form-group">
-										<div class="nice-select form-control wide" tabindex="0"><span class="current">Ubicación</span>
+										<div class="nice-select form-control wide" tabindex="0">
+											<span class="current" id="clinica">Ubicación</span>
 											<ul class="list">
 												<li data-value="2" class="option">Clínica Chavarría Estrada, SJ</li>
 												<li data-value="3" class="option">CliniMédica, Turrialba</li>
@@ -706,11 +708,11 @@
 								</div>
 								<div class="col-lg-12 col-md-12 col-12">
 									<div class="form-group">
-										<textarea name="message" placeholder="Escribe tu mensaje aquí....."></textarea>
+										<textarea id="message" name="message" placeholder="Escribe tu mensaje aquí....."></textarea>
 									</div>
 								</div>
 								<div class="col-12">
-									<div class="form-group">
+									<div class="form-group" id="status">
 										<p>( Te confirmaremos mediante correo electrónico o mensaje de texto )</p>
 									</div>
 								</div>

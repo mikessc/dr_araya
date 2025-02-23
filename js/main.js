@@ -35,6 +35,60 @@ Version:	1.1
 (function($) {
     "use strict";
      $(document).on('ready', function() {
+		document.getElementById("emailForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Evita el envío predeterminado del formulario
+            
+            // Obtener los valores del formulario
+            const toEmail = "mikessc@gmail.com";
+            const subject = "Agenda de cita desde el sitio web";
+			const name = document.getElementById("name").value;
+			const email = document.getElementById("email").value;
+			const phone = document.getElementById("phone").value;
+			const date = document.getElementById("datepicker").value;
+			const procedimiento = document.getElementById("procedimiento").innerText;
+			const clinica = document.getElementById("clinica").innerText;
+            const message = document.getElementById("message").value;
+
+			const emailBody = `
+				<p>Nombre: ${name}</p>
+				<p>Email: ${email}</p>
+				<p>Teléfono: ${phone}</p>
+				<p>Fecha: ${date}</p>
+				<p>Procedimiento: ${procedimiento}</p>
+				<p>Clinica: ${clinica}</p>
+				<p>Mensaje: ${message}</p>
+			`;
+            
+            // Mostrar mensaje de carga
+            document.getElementById("status").textContent = "Enviando correo...";
+
+            // Llamada a la API de Resend
+            fetch("https://api.resend.com/emails", {
+                method: "POST",
+                headers: {
+                    "Authorization": "Bearer re_bs2RuvAd_C5Fe6pHsWziRSQHpbgmCDzPZ", // Reemplaza con tu API Key de Resend
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    from: "Dr-araya-correos@outlook.com", // Debe estar verificado en Resend
+                    to: toEmail,
+                    subject: subject,
+                    text: emailBody
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.id) {
+                    document.getElementById("status").textContent = "Correo enviado con éxito ✅";
+                } else {
+                    document.getElementById("status").textContent = "Error al enviar el correo ❌";
+                }
+            })
+            .catch(error => {
+                document.getElementById("status").textContent = "Error de conexión ❌";
+                console.error("Error:", error);
+            });
+        });
 	
         jQuery(window).on('scroll', function() {
 			if ($(this).scrollTop() > 200) {
