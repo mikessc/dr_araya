@@ -35,6 +35,8 @@ Version:	1.1
 (function($) {
     "use strict";
      $(document).on('ready', function() {
+		emailjs.init("pt7rdUPtk8OfF_qmC");
+
 		document.getElementById("emailForm").addEventListener("submit", function(event) {
             event.preventDefault(); // Evita el envío predeterminado del formulario
             
@@ -62,32 +64,24 @@ Version:	1.1
             // Mostrar mensaje de carga
             document.getElementById("status").textContent = "Enviando correo...";
 
-            // Llamada a la API de Resend
-            fetch("https://api.resend.com/emails", {
-                method: "POST",
-                headers: {
-                    "Authorization": "Bearer re_bs2RuvAd_C5Fe6pHsWziRSQHpbgmCDzPZ", // Reemplaza con tu API Key de Resend
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    from: "Dr-araya-correos@outlook.com", // Debe estar verificado en Resend
-                    to: toEmail,
-                    subject: subject,
-                    text: emailBody
-                })
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.id) {
-                    document.getElementById("status").textContent = "Correo enviado con éxito ✅";
-                } else {
-                    document.getElementById("status").textContent = "Error al enviar el correo ❌";
-                }
-            })
-            .catch(error => {
-                document.getElementById("status").textContent = "Error de conexión ❌";
-                console.error("Error:", error);
-            });
+			emailjs.send("service_cdl7rq4", "template_5nighoh", {
+				subject: subject,
+				name: name,
+				email: email,
+				phone: phone,
+				date: date,
+				procedimiento: procedimiento,
+				ubicacion: clinica,
+				message: message
+			})
+			.then(response => {
+				document.getElementById("status").textContent = "Correo enviado con éxito ✅";
+			})
+			.catch(error => {
+				document.getElementById("status").textContent = "Error al enviar el correo ❌";
+				console.error("Error:", error);
+			});
+
         });
 	
         jQuery(window).on('scroll', function() {
