@@ -1748,6 +1748,9 @@ p a:hover {
 	padding:100px 0px;
 	position:relative;
 }
+.clients .owl-carousel {
+	display: flex;
+}
 .clients .owl-carousel .owl-stage {
 	display: flex;
 	align-items: center;

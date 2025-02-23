@@ -162,7 +162,7 @@ Version:	1.1
 		/*===============================
 			Clients Slider JS
 		=================================*/ 
-		$('.clients-slider').owlCarousel({
+		/* $('.clients-slider').owlCarousel({
 			items:5,
 			autoplay:true,
 			autoplayTimeout:3500,
@@ -186,7 +186,7 @@ Version:	1.1
 					items:5,
 				},
 			}
-		});
+		}); */
 		
 		/*====================================
 			Single Portfolio Slider JS

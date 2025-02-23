@@ -371,7 +371,12 @@ Version:	1.1
 	padding: 65px 0px;
 }
 
-
+.clients .single-clients img {
+	padding: 0;
+}
+.clients .single-clients .icon {
+	font-size: 60px;
+}
 
 
 
@@ -1032,13 +1037,24 @@ Version:	1.1
 .footer .copyright {
 	padding: 20px 0;
 }
+.clients .single-clients img {
+	padding: 0;
+}
+.clients .single-clients .icon {
+	font-size: 60px;
+}
 
 
 }
 /* Mobile Screen */
 @media only screen and (max-width: 450px) {
 
-
+.clients .single-clients img {
+	padding: 0;
+}
+.clients .single-clients .icon {
+	font-size: 50px;
+}
 .section{
 	padding:50px 0px;
 }
