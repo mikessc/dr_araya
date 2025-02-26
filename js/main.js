@@ -106,6 +106,34 @@ Version:	1.1
 		$('.pro-features .get-pro').on( "click", function(){
 			$('.pro-features').toggleClass('active');
 		});
+
+		/*====================================
+			Nav current item JS
+		======================================*/ 
+		$('.navigation').on( "click", function(e){
+			var currentItem = $(e.target).parent('li');
+			$('.nav.menu li').removeClass('active');
+			currentItem.addClass('active');
+		});
+
+		const sections = document.querySelectorAll("section");
+		const navLinks = document.querySelectorAll(".nav.menu li a");
+
+		window.addEventListener("scroll", () => {
+			let scrollPos = window.scrollY + window.innerHeight / 2;
+		  
+			document.querySelectorAll("section").forEach((section) => {
+			  if (
+				section.offsetTop <= scrollPos &&
+				section.offsetTop + section.offsetHeight > scrollPos
+			  ) {
+				document.querySelectorAll(".nav.menu li").forEach((link) => {
+				  $(link).removeClass("active");
+				});
+				$(`a[href="#${section.id}"]`).parent('li').addClass("active");
+			  }
+			});
+		});
 		
 		/*====================================
 			Search JS
